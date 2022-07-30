@@ -1,0 +1,6 @@
+.vscode/
+.venv/
+*.png
+__pycache__
+chromedriver*
+*.jar
