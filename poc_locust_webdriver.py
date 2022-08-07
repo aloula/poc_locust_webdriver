@@ -43,6 +43,7 @@ class MyUser(WebdriverUser):
         self.client.implicitly_wait(timeout)
 
     def on_stop(self):
+        self.client.close()
         self.client.quit()
 
     # teste
@@ -67,7 +68,7 @@ class MyUser(WebdriverUser):
         self.client.implicitly_wait(wait_element)
         self.environment.events.request.fire(
             request_type="Busca",
-            name="Busca Produto",
+            name="Busca Bandas",
             response_time=(time.monotonic() - scenario_start_time) * 1000,
             response_length=0,
             exception=None,

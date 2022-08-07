@@ -1,6 +1,6 @@
 # PoC Locust Webdriver
 
-PoC mostrando o uso do Locust com Webdriver para simular vários usuários navegando numa página.
+PoC mostrando o uso do Locust com Webdriver para simular vários usuários fazendo buscas no Google por bandas clássicas de Rock.
 
 
 ### Pré-requisitos:
@@ -27,7 +27,8 @@ Python 3.8.XX
 ```
 
 3 - Normalmente o Linux já vem com a versão do Python 2.7.X. Para deixar a versão 3 como padrão, acrescente a linha abaixo no ~/.bashrc:  
-alias python='python3'
+
+`alias python='python3'`
 
 4 - Teste o alias:
 ```
@@ -68,14 +69,14 @@ $ locust -f <arquivo_do_teste.py>
 ```
 $ locust -f poc_locust_webdriver.py
 ```
-- Acesse a interface em: <localhost:8089>
+- Acesse a interface em: <http://localhost:8089>
 
 
 - Para execução do Locust sem UI:
 ```
 $ locust -f <arquivo_do_teste.py> --headless -u <usuários> -r <usuários/segundo> -t <tempo de teste>
 ```
-- Exemplo simulando 100 usuários com subida de 10 usuários/s e 10 mins de teste:
+- Exemplo simulando 10 usuários com subida de 1 usuário/s e 5 mins de teste:
 ```
-$ locust -f poc_locust_webdriver.py --headless -u 100 -r 10 -t 10m
+$ locust -f poc_locust_webdriver.py --headless -u 10 -r 1 -t 5m
 ```
